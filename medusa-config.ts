@@ -17,4 +17,11 @@ module.exports = defineConfig({
       cookieSecret: process.env.COOKIE_SECRET || "supersecret",
     },
   },
+  admin: {
+    vite: () => ({
+      server: {
+        allowedHosts: ['bearmind.online', '.bearmind.online'],
+      },
+    }),
+  },
 })
